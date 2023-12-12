@@ -14,14 +14,15 @@ import static com.codeborne.selenide.Selenide.*;
 
 public class TestGenerate {
 
-   @BeforeEach
+   /*@BeforeEach
     void setup() {
         open("http://localhost:9999");
-    }
+    }*/
 
     @Test
     @DisplayName("Should successful plan and replan meeting")
     void shouldSuccessfulPlanAndReplanMeeting() {
+        open("http://localhost:9999");
         var validUser = DataGenerator.Registration.generateUser("ru");
         var daysToAddForFirstMeeting = 4;
         var firstMeetingDate = DataGenerator.generateDate(daysToAddForFirstMeeting);
